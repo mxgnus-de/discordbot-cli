@@ -8,8 +8,8 @@ import (
 	"github.com/mxgnus-de/discordbot-cli/internal/utils"
 )
 
-var jsBaseBotURL = "https://uploads.mxgnus.de/api/haste/1517964bf73ef35/raw"
-var tsBaseBotURL = "https://uploads.mxgnus.de/api/haste/246b6c97b8907d0/raw"
+const jsBaseBotURL = "https://uploads.mxgnus.de/api/haste/1517964bf73ef35/raw"
+const tsBaseBotURL = "https://uploads.mxgnus.de/api/haste/246b6c97b8907d0/raw"
 
 func Create(basebotCmd *flag.FlagSet, typescript *bool) {
 	if *typescript {
@@ -20,7 +20,6 @@ func Create(basebotCmd *flag.FlagSet, typescript *bool) {
 }
 
 func createWithJavascript() {
-
 	fmt.Println("Creating a new bot...")
 	fmt.Println("Setup npm...")
 	utils.ExecCommand("NPM_INIT", "npm", "init", "-y")
